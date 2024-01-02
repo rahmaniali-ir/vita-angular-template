@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import ./styles/variables
+@import ./styles/button
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html, body
+  min-height: 100vh
+
+body
+  background: var(--background)
+  color: var(--text)
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  margin: 0
+  

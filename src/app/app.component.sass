@@ -1,0 +1,41 @@
+
+:host
+  display: flex
+  flex-direction: column
+
+nav
+  align-items: center
+  display: flex
+  gap: 16px
+  padding-block: 24px
+  padding-inline: clamp(32px, 10vw, 200px)
+
+  .logo
+    align-items: center
+    display: flex
+    gap: 16px
+
+    img
+      display: block
+      height: 30px
+      object-fit: contain
+      width: 30px
+
+    span
+      font-size: 24px
+
+  ul
+    align-items: center
+    display: flex
+    list-style: none
+    margin-inline-start: auto
+    padding: 0
+
+    li
+      align-items: center
+      display: flex
+      gap: 8px
+
+      a
+        color: currentColor
+        text-decoration: none
