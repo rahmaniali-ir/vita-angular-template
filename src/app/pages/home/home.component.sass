@@ -28,3 +28,75 @@ section.header
   .button
     background: var(--primary)
     padding: 10px 16px
+
+section.features
+  align-items: center
+  display: flex
+  justify-content: center
+  padding: 128px 10vw
+
+  .container
+    border: solid 1px var(--border)
+    display: flex
+    min-height: 80vh
+
+    .details
+      background: url(/assets/background2.jpg)
+      background-size: cover
+      background-position: center
+      border-inline-end: solid 1px var(--border)
+      display: flex
+      flex: 1.5
+      flex-direction: column
+      gap: 32px
+      justify-content: center
+      padding: 64px
+
+      strong
+        font-size: 40px
+        font-weight: 400
+
+      p
+        font-size: 18px
+
+    .cards
+      align-items: center
+      display: flex
+      flex: 2
+      justify-content: center
+      padding: 24px 10vw
+
+      .grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 32px
+
+        .card
+          background: #2d2d2d
+          border-radius: 10px
+          display: flex
+          flex-direction: column
+          gap: 32px
+          padding: 32px
+          position: relative
+
+          &:nth-child(odd)
+            translate: 0 -25%
+
+          &:nth-child(even)
+            translate: 0 25%
+
+          img
+            display: block
+            max-height: 52px
+            max-width: 52px
+            object-fit: contain
+
+          strong
+            color: var(--accent)
+            font-size: 18px
+            font-weight: bold
+            margin-block-start: 32px
+
+          p
+            color: #6a6a6a
