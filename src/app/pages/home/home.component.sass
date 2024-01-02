@@ -109,14 +109,28 @@ section.article
     max-width: 75vw
 
     .image
+      --article-image: url(/assets/background3.jpg)
+
       align-items: center
-      background: url(/assets/background3.jpg)
+      background: var(--article-image)
       background-size: contain
       background-position: left
       flex: 1
       display: flex
+      isolation: isolate
       justify-content: center
       padding: 64px
+      position: relative
+
+      &.blob::before
+        background: url(/assets/blob.gif)
+        background-repeat: no-repeat
+        background-size: 70%
+        background-position: center
+        content: ''
+        display: block
+        inset: 0
+        position: absolute
       
       strong
         font-size: 32px
@@ -171,3 +185,33 @@ section.analytics
       small
         color: #a7a7a7
         font-size: 20px
+
+section.partners
+  align-items: stretch
+  display: flex
+  padding: 0 64px
+  min-height: unset
+
+  .container
+    align-items: stretch
+    border: solid 1px var(--border)
+    display: flex
+    flex: 1
+
+    .cell
+      align-items: center
+      display: flex
+      flex: 1
+      height: 100%
+      justify-content: center
+      padding: 64px
+
+      + .cell
+        border-inline-start: solid 1px var(--border)
+
+      strong
+        font-size: 32px
+        font-weight: 400
+
+      img
+        min-width: 100px
