@@ -1,10 +1,12 @@
 <!-- header -->
 <section class="header">
-  <h1>The New Standard in Data Analysis</h1>
+  <h1 animate="translate-in">The New Standard in Data Analysis</h1>
 
-  <p>Use Data to Get a 360-Degree View of Your Business</p>
+  <p [delay]="0.2" animate="translate-in">
+    Use Data to Get a 360-Degree View of Your Business
+  </p>
 
-  <div class="buttons">
+  <div [delay]="0.4" animate="translate-in" class="buttons">
     <a href="#" class="button primary large">Learn More</a>
   </div>
 </section>
@@ -13,9 +15,11 @@
 <section class="features">
   <div class="container">
     <div class="details">
-      <strong>Let Your Data Take Your Business to Higher Grounds</strong>
+      <strong animate="clip-in"
+        >Let Your Data Take Your Business to Higher Grounds</strong
+      >
 
-      <p>
+      <p [delay]="0.2" animate="clip-in">
         I'm a paragraph. Click here to add your own text and edit me. It’s easy.
         Just click “Edit Text” or double click me to add your own content and
         make changes to the font.
@@ -24,57 +28,15 @@
 
     <div class="cards">
       <div class="grid">
-        <div class="card">
-          <img src="/assets/cloud.png" alt="Cloud Analytics Modernization" />
+        <div
+          *ngFor="let card of cards; trackBy: trackByTitle; let i = index"
+          class="card"
+        >
+          <img [src]="card.image" [alt]="card.title" animate="clip-in" />
 
-          <strong>Cloud Analytics Modernization</strong>
+          <strong [delay]="0.2" animate="clip-in">{{ card.title }}</strong>
 
-          <p>
-            I'm a paragraph. Click here to add your own text and edit me. Let
-            your users get to know you.
-          </p>
-        </div>
-
-        <div class="card">
-          <img
-            src="/assets/acceleration.png"
-            alt="Data Science Acceleration​​​​​​​"
-          />
-
-          <strong>Data Science Acceleration​​​​​​​</strong>
-
-          <p>
-            I'm a paragraph. Click here to add your own text and edit me. Let
-            your users get to know you.
-          </p>
-        </div>
-
-        <div class="card">
-          <img
-            src="/assets/versitality.png"
-            alt="Versatility in Application​​​​​​​"
-          />
-
-          <strong>Versatility in Application​​​​​​​</strong>
-
-          <p>
-            I'm a paragraph. Click here to add your own text and edit me. Let
-            your users get to know you.
-          </p>
-        </div>
-
-        <div class="card">
-          <img
-            src="/assets/customer.png"
-            alt="Full Customer Experience Service​"
-          />
-
-          <strong>Full Customer Experience Service​</strong>
-
-          <p>
-            I'm a paragraph. Click here to add your own text and edit me. Let
-            your users get to know you.
-          </p>
+          <p [delay]="0.4" animate="translate-in">{{ card.details }}</p>
         </div>
       </div>
     </div>
@@ -85,11 +47,13 @@
 <section class="article">
   <article>
     <div class="image">
-      <strong> Unprecedented Velocity. Impeccable Reliability.​​​​​​​ </strong>
+      <strong animate="fade-in">
+        Unprecedented Velocity. Impeccable Reliability.​​​​​​​
+      </strong>
     </div>
 
     <div class="content">
-      <p>
+      <p [delay]="0.2" animate="translate-in">
         I'm a paragraph. Click here to add your own text and edit me. It’s easy.
         Just click “Edit Text” or double click me to add your own content and
         make changes to the font. Feel free to drag and drop me anywhere you
@@ -97,7 +61,7 @@
         your users know a little more about you.
       </p>
 
-      <p>
+      <p [delay]="0.4" animate="translate-in">
         ​​​​​​​​​​​​​​This is a great space to write a long text about your
         company and your services. You can use this space to go into a little
         more detail about your company. Talk about your team and what services
@@ -107,7 +71,7 @@
         are.
       </p>
 
-      <div class="buttons">
+      <div [delay]="0.6" animate="translate-in" class="buttons">
         <a href="" class="button primary large">Learn More</a>
       </div>
     </div>
@@ -119,29 +83,14 @@
   <strong>We Take Pride in Our Numbers</strong>
 
   <div class="cards">
-    <div class="card">
-      <strong>15</strong>
-      <small>Years of Experience</small>
-    </div>
-
-    <div class="card">
-      <strong>10K</strong>
-      <small>Business Partners</small>
-    </div>
-
-    <div class="card">
-      <strong>25K</strong>
-      <small>Products Installed</small>
-    </div>
-
-    <div class="card">
-      <strong>22</strong>
-      <small>Countries World Wide</small>
-    </div>
-
-    <div class="card">
-      <strong>5</strong>
-      <small>Industry Awards</small>
+    <div
+      *ngFor="let card of analyticCards; trackBy: trackByTitle; let i = index"
+      [delay]="i * 0.2"
+      animate="translate-in"
+      class="card"
+    >
+      <strong animate="translate-in">{{ card.value }}</strong>
+      <small animate="translate-in">{{ card.title }}</small>
     </div>
   </div>
 </section>
@@ -176,13 +125,14 @@
   <article>
     <div
       [style.--article-image]="'url(/assets/background5.jpg)'"
+      animate="fade-in"
       class="image blob"
     >
       <strong> Unprecedented Velocity. Impeccable Reliability.​​​​​​​ </strong>
     </div>
 
     <div class="content">
-      <p>
+      <p animate="translate-in">
         I'm a paragraph. Click here to add your own text and edit me. It’s easy.
         Just click “Edit Text” or double click me to add your own content and
         make changes to the font. Feel free to drag and drop me anywhere you
@@ -190,7 +140,7 @@
         your users know a little more about you.
       </p>
 
-      <div class="buttons">
+      <div [delay]="0.2" animate="translate-in" class="buttons">
         <a href="" class="button primary large">Learn More</a>
       </div>
     </div>

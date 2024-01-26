@@ -1,0 +1,30 @@
+
+@keyframes reset-translate-animation
+  100%
+    translate: var(--animation-translate, 0 0)
+
+@keyframes reset-opacity-animation
+  100%
+    opacity: var(--animation-opacity, 1)
+
+@keyframes reset-clip-animation
+  100%
+    clip-path: var(--animation-clip, inset(0%))
+
+.animate
+  --animation-delay: 0s
+  --animation-duration: 1s
+
+  &.fade-in
+    animation: reset-opacity-animation var(--animation-duration) var(--animation-delay) ease forwards
+    opacity: 0
+
+  &.translate-in
+    animation: reset-translate-animation var(--animation-duration) var(--animation-delay) ease forwards, reset-opacity-animation var(--animation-duration) var(--animation-delay) ease forwards
+    opacity: 0
+    translate: -25% 0
+
+  &.clip-in
+    animation: reset-clip-animation var(--animation-duration) var(--animation-delay) ease forwards, reset-opacity-animation var(--animation-duration) var(--animation-delay) ease forwards
+    clip-path: inset(0% 100% 0% 0%)
+    opacity: 0
