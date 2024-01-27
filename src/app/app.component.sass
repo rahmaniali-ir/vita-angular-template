@@ -2,27 +2,19 @@
 :host
   display: flex
   flex-direction: column
+  position: relative
 
 nav
   align-items: center
+  background: #151418
   display: flex
+  font-size: 14px
   gap: 16px
   padding-block: 24px
   padding-inline: clamp(32px, 10vw, 200px)
-
-  .logo
-    align-items: center
-    display: flex
-    gap: 16px
-
-    img
-      display: block
-      height: 30px
-      object-fit: contain
-      width: 30px
-
-    span
-      font-size: 24px
+  position: sticky
+  top: 0
+  z-index: 100
 
   ul
     align-items: center
@@ -40,3 +32,71 @@ nav
       a
         color: currentColor
         text-decoration: none
+        transition: all .3s ease
+
+        &:not(.outline):hover
+          color: var(--accent)
+
+        &.outline
+          padding: 10px 16px
+
+          &:hover
+            background: var(--primary-light)
+            border-color: var(--primary-light)
+            color: var(--background)
+
+footer
+  color: #bbb
+  display: flex
+  flex-wrap: wrap
+  gap: 24px
+  padding: 64px 8vw
+
+  .column
+    align-items: flex-start
+    display: flex
+    flex: 1
+    flex-direction: column
+    gap: 24px
+
+    .logo
+      margin-bottom: 32px
+
+    > a:not(.button)
+      color: currentColor
+      text-decoration: none
+      transition: all .3s ease
+
+      &.active, &:hover
+        color: var(--primary)
+
+  .newsletter
+    input
+      background: #fff
+      border: solid 1px var(--accent)
+      border-radius: 4px
+      box-shadow: 0px 1px 4px 0px var(--accent)
+      font-size: 14px
+      line-height: 1.4em
+      padding: 8px
+      width: 100%
+
+    .button:hover
+      background: #f9d5d3
+      border-color: #f9d5d3
+      color: #898989
+
+  .social-links
+    a
+      align-items: center
+      background: #bbbbbb
+      border-radius: 50%
+      color: var(--background)
+      display: inline-flex
+      height: 30px
+      justify-content: center
+      transition: all .3s ease
+      width: 30px
+
+      &:hover
+        background: #fff

@@ -30,3 +30,54 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+
+<footer>
+  <div class="column">
+    <div class="logo">
+      <img src="/assets/logo-color.png" alt="Logo" />
+      <span>Your Site Name</span>
+    </div>
+
+    <a href="tel:021-123456789">021-123456789</a>
+    <a href="mailto:Info@mysite.com​​​​​​​">Info@mysite.com​​​​​​​</a>
+    <span>Tehran, Your address here...</span>
+  </div>
+
+  <div class="column">
+    <a href="#" class="active">Home</a>
+    <a href="#">Solutions</a>
+    <a href="#">Vision</a>
+    <a href="#">Blog</a>
+    <a href="#" class="button primary large outline-on-hover">Get Started</a>
+  </div>
+
+  <div class="column newsletter">
+    <p>Subscribe to Our Newsletter</p>
+
+    <div class="field">
+      <label for="newsletter-email">*Email</label>
+      <input id="newsletter-email" type="email" />
+    </div>
+
+    <button href="#" class="button outline large">Submit</button>
+  </div>
+
+  <div class="column">
+    <p>Follow Us On:</p>
+
+    <div class="social-links buttons">
+      <a
+        *ngFor="let socialLink of socialLinks; trackBy: trackByName"
+        [href]="socialLink.link"
+        [title]="socialLink.name"
+      >
+        <svg class="icon">
+          <use [attr.href]="'#' + socialLink.icon" />
+        </svg>
+      </a>
+    </div>
+
+    <p>© Your company Name.</p>
+    <p>All rights reserved.</p>
+  </div>
+</footer>

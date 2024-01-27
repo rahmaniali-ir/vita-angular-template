@@ -6,15 +6,19 @@
 
 .button
   align-items: center
+  background: none
+  border: 1px solid transparent
   border-radius: var(--radius)
   color: currentColor
+  cursor: pointer
   display: inline-flex
   gap: 8px
   padding: 8px 16px
   text-decoration: none
+  transition: all .3s ease
 
   &.outline
-    border: 1px solid currentColor
+    border-color: currentColor
 
   &.primary
     background: var(--primary)
@@ -22,3 +26,8 @@
 
   &.large
     padding: 16px 24px
+
+  &.outline-on-hover:hover
+    background: none
+    border-color: currentColor
+    color: var(--text)
