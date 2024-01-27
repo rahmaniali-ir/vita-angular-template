@@ -97,57 +97,6 @@ section.features
           p
             color: #6a6a6a
 
-section.article
-  align-items: center
-  display: flex
-  justify-content: center
-  padding: 32px
-
-  article
-    display: flex
-    gap: 128px
-    max-width: 75vw
-
-    .image
-      --article-image: url(/assets/background3.jpg)
-
-      align-items: center
-      background: var(--article-image)
-      background-size: contain
-      background-position: left
-      flex: 1
-      display: flex
-      isolation: isolate
-      justify-content: center
-      padding: 64px
-      position: relative
-
-      &.blob::before
-        background: url(/assets/blob.gif)
-        background-repeat: no-repeat
-        background-size: 70%
-        background-position: center
-        content: ''
-        display: block
-        inset: 0
-        position: absolute
-      
-      strong
-        font-size: 32px
-        font-weight: 400
-        text-align: center
-
-    .content
-      display: flex
-      flex-direction: column
-      flex: 1
-      gap: 32px
-      padding: 128px 32px
-
-      p
-        color: #a7a7a7
-        font-size: 18px
-
 section.analytics
   align-items: center
   background: url(/assets/background4.jpg)

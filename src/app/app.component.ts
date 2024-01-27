@@ -29,6 +29,25 @@ export class AppComponent {
     },
   ];
 
+  navLinks = [
+    {
+      name: 'Home',
+      link: '/',
+    },
+    {
+      name: 'Solution',
+      link: '/solutions',
+    },
+    {
+      name: 'Vision',
+      link: '/vision',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+  ];
+
   trackByName(index: number, { name }: { name: string }) {
     return name;
   }
