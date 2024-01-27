@@ -34,8 +34,13 @@ nav
         text-decoration: none
         transition: all .3s ease
 
-        &:not(.outline):hover
-          color: var(--accent)
+        &:not(.outline)
+          &:hover
+            color: var(--accent)
+
+          &.active
+            color: var(--accent)
+            font-weight: bold
 
         &.outline
           padding: 10px 16px
@@ -67,8 +72,12 @@ footer
       text-decoration: none
       transition: all .3s ease
 
-      &.active, &:hover
+      &:hover
         color: var(--primary)
+      
+      &.active
+        color: var(--primary)
+        font-weight: bold
 
   .newsletter
     input

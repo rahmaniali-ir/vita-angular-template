@@ -7,7 +7,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AnimateDirective } from './directives/animate.directive';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { VisionComponent } from './pages/vision/vision.component';
-import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +15,9 @@ import { BlogComponent } from './pages/blog/blog.component';
     AnimateDirective,
     SolutionsComponent,
     VisionComponent,
-    BlogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

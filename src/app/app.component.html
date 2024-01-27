@@ -6,23 +6,35 @@
 
   <ul>
     <li>
-      <a routerLink="/" class="button">Home</a>
+      <a
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        routerLinkActive="active"
+        class="button"
+        >Home</a
+      >
     </li>
 
     <li>
-      <a routerLink="/solutions" class="button">Solutions</a>
+      <a routerLink="/solutions" routerLinkActive="active" class="button"
+        >Solutions</a
+      >
     </li>
 
     <li>
-      <a routerLink="/vision" class="button">Vision</a>
+      <a routerLink="/vision" routerLinkActive="active" class="button"
+        >Vision</a
+      >
     </li>
 
     <li>
-      <a routerLink="/blog" class="button">Blog</a>
+      <a routerLink="/blog" routerLinkActive="active" class="button">Blog</a>
     </li>
 
     <li>
-      <a routerLink="/" class="button outline">Get Started</a>
+      <a routerLink="/" routerLinkActive="active" class="button outline"
+        >Get Started</a
+      >
     </li>
   </ul>
 </nav>
@@ -44,11 +56,21 @@
   </div>
 
   <div class="column">
-    <a href="/" class="active">Home</a>
-    <a href="/solutions">Solutions</a>
-    <a href="/vision">Vision</a>
-    <a href="/blog">Blog</a>
-    <a href="/" class="button primary large outline-on-hover">Get Started</a>
+    <a
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      routerLink="/"
+      >Home</a
+    >
+    <a routerLinkActive="active" routerLink="/solutions">Solutions</a>
+    <a routerLinkActive="active" routerLink="/vision">Vision</a>
+    <a routerLinkActive="active" routerLink="/blog">Blog</a>
+    <a
+      routerLinkActive="active"
+      routerLink="/"
+      class="button primary large outline-on-hover"
+      >Get Started</a
+    >
   </div>
 
   <div class="column newsletter">
@@ -68,8 +90,9 @@
     <div class="social-links buttons">
       <a
         *ngFor="let socialLink of socialLinks; trackBy: trackByName"
-        [href]="socialLink.link"
+        [routerLink]="socialLink.link"
         [title]="socialLink.name"
+        routerLinkActive="active"
       >
         <svg class="icon">
           <use [attr.href]="'#' + socialLink.icon" />
