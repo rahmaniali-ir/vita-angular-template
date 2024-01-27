@@ -1,3 +1,46 @@
-<section>
-  <p>solutions works!</p>
+<!-- table -->
+<section class="table">
+  <div
+    *ngFor="let row of tableRows; trackBy: trackByName; let i = index"
+    class="row"
+  >
+    <div class="image-column">
+      <div class="image">
+        <img
+          [delay]="i * 0.4"
+          animate="translate-in"
+          [src]="'/assets/' + row.image"
+          [alt]="row.name"
+        />
+      </div>
+    </div>
+
+    <div class="details-column">
+      <strong [delay]="i * 0.4 + 0.2" animate="translate-in">{{
+        row.name
+      }}</strong>
+      <p [delay]="i * 0.4 + 0.4" animate="translate-in">
+        {{ row.description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- articles -->
+<section class="articles">
+  <article>
+    <div class="image">
+      <strong animate="clip-in">We Integrate With Your Ecosystem</strong>
+    </div>
+
+    <div class="content">
+      <p [delay]="0.2" animate="clip-in">
+        I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+        Just click “Edit Text” or double click me to add your own content and
+        make changes to the font. Feel free to drag and drop me anywhere you
+        like on your page. I’m a great place for you to tell a story and let
+        your users know a little more about you.
+      </p>
+    </div>
+  </article>
 </section>
